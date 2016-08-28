@@ -1,5 +1,5 @@
-# AutofacServiceFabricExample
-Really poorly documented project with Autofac DI working with Service Fabric WebAPI
+# Autofac Service Fabric Example
+Really poorly documented project with Autofac DI working with Service Fabric WebAPI to respolve a reliable sevice. 
 
 It sets up Autofac, configures a basic repo and a Reliable Service, before requesting the Repo (which in turn requests the service) via DI in the Controller. 
 
