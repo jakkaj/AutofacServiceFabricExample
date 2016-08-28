@@ -7,12 +7,10 @@ namespace WebApi1.Controllers
 {
     public class ValuesController : ApiController
     {
-        private readonly ITestModelClass _testModel;
         private readonly ISomeRepo _someRepo;
 
-        public ValuesController(ITestModelClass testModel, ISomeRepo someRepo)
+        public ValuesController(ISomeRepo someRepo)
         {
-            _testModel = testModel;
             _someRepo = someRepo;
         }
         // GET api/values 

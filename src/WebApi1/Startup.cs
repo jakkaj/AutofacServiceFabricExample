@@ -32,9 +32,10 @@ namespace WebApi1
 
             builder.RegisterWebApiFilterProvider(config);
 
-            builder.RegisterType<TestModelClass>().As<ITestModelClass>();
+            //Register the repo that our code will use to abstract the end code one level from the actor
             builder.RegisterType<SomeRepo>().As<ISomeRepo>();
-            //IMyService helloWorldClient = ServiceProxy.Create<IMyService>(new Uri("fabric:/MyApplication/MyHelloWorldService"));
+
+            //Register the actor.
             builder.Register((e) => ServiceProxy.Create<IStateless1>(new Uri("fabric:/Application3/Stateless1")))
                 .As<IStateless1>();
 
